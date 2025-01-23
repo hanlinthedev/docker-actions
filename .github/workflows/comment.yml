@@ -16,7 +16,7 @@ jobs:
         run: ls -la
 
       - name: Commenting
-        uses: ./
+        uses: hanlinthedev/JavaScript-Actions@1.0.0
         with:
-          github_token: ${{secrets.GITHUB_TOKEN}}
-          giphy_apikey: ${{secrets.GIPHY_APIKEY}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          giphy-api-key: ${{secrets.GIPHY_APIKEY}}
