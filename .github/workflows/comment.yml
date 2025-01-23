@@ -1,0 +1,19 @@
+on:
+  pull_request:
+    types:
+      - opened
+jobs:
+  comment_for_pr:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Commenting
+        uses: ./
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          giphy_apikey: ${{secrets.GIPHY_APIKEY}}

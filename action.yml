@@ -1,0 +1,16 @@
+# action.yml
+name: "Comment To PR"
+description: "Appriciation Comment to PR with Github Actions"
+inputs:
+  github_token: # id of input
+    description: Token from github secrets
+    required: true
+  giphy_apikey:
+    description: API Key for Giphy RESTAPI call
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.github_token }}
+    - ${{ inputs.giphy_apikey}}
