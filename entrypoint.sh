@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 GITHUB_TOKEN=$1
 GIPHY_APIKEY=$2
