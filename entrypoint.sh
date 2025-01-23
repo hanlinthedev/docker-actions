@@ -6,7 +6,7 @@ GIPHY_APIKEY=$2
 pull_req_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
 echo PR_NUMBER - $pull_req_number
 
-giphy_response=$(curl -s "https://api.giphy.com/v1/gifs/random?api_key=$GIPHY_APIKEY&tag=&rating=g")
+giphy_response=$(curl -s "https://api.giphy.com/v1/gifs/random?api_key=$GIPHY_APIKEY&tag=thank+you&rating=g")
 echo Giphy response - $giphy_response
 
 gif_url=$(echo "$giphy_response" | jq --raw-output .data.images.downsized.url)
